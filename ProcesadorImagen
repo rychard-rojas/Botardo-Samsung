@@ -1,0 +1,18 @@
+# ProcesadorImagen.py
+import base64
+from procesador import Procesador
+
+class ProcesadorImagen(Procesador):
+    def procesar(self):
+        return self.procesar_imagen(self.datos)
+
+    def procesar_imagen(self, ruta_o_bytes_imagen):
+        try:
+            if isinstance(ruta_o_bytes_imagen, bytes):
+                return base64.b64encode(ruta_o_bytes_imagen).decode('utf-8')
+            else:
+                with open(ruta_o_bytes_imagen, "rb") as archivo:
+                    return base64.b64encode(archivo.read()).decode('utf-8')
+        except Exception as e:
+            print(f"Error al convertir imagen: {e}")
+            return None

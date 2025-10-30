@@ -1,0 +1,25 @@
+from abc import ABC, abstractmethod
+import re
+import numpy as np
+
+
+class Procesador(ABC):
+    """
+    Clase abstracta base para procesar distintos tipos de datos:
+    texto, imagen o audio.
+    """
+
+    def __init__(self, datos=None):
+        """
+        Inicializa el procesador con los datos brutos.
+        :param datos: entrada a procesar (texto, imagen o audio)
+        """
+        self.datos = datos
+
+    @abstractmethod
+    def procesar(self):
+        """
+        Método abstracto que debe ser implementado por las subclases.
+        Define cómo se procesan los datos específicos.
+        """
+        pass

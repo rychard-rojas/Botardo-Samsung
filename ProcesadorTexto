@@ -1,0 +1,17 @@
+# ProcesadorTexto.py
+import re
+from procesador import Procesador
+
+class ProcesadorTexto(Procesador):
+    def procesar(self):
+        return self.procesar_texto(self.datos)
+
+    def procesar_texto(self, texto: str):
+        texto_limpio = self.limpiar_texto(texto)
+        return texto_limpio
+
+    def limpiar_texto(self):
+        texto = self.datos.lower()
+        texto = re.sub(r'[^\w\s]', '', texto)
+        texto = re.sub(r'\s+', ' ', texto).strip()
+        return texto
