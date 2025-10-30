@@ -11,9 +11,9 @@ import os
 
 # Configuración de tokens y rutas
 # Obtiene el token del bot de Telegram desde la variable de entorno TELEGRAM_TOKEN, o usa un valor por defecto
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN', '8252725949:AAHx4rnp8fBQI8yq8YeDrHPlkK7j_Sp630E')
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN', 'ponga acá su api key')
 # Obtiene la API key de Groq desde la variable de entorno GROQ_API_KEY, o usa un valor por defecto
-GROQ_API_KEY = os.getenv('GROQ_API_KEY', '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')
+GROQ_API_KEY = os.getenv('GROQ_API_KEY', 'ponga acá su api key')
 # URL de la API de Groq para chat completions (puede cambiar según la documentación de Groq)
 GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions'
 # Ruta al archivo JSON que contiene el dataset de preguntas y respuestas
