@@ -1,18 +1,55 @@
-# ProcesadorImagen.py
-import base64
-from procesador import Procesador
+"""
+Módulo procesador_imagen.py
+
+Implementa la clase 'ProcesadorImagen', responsable del preprocesamiento
+de imágenes y detección de expresiones faciales para el análisis emocional.
+"""
+
+from typing import Any
+from .procesador import Procesador
+
 
 class ProcesadorImagen(Procesador):
-    def procesar(self):
-        return self.procesar_imagen(self.datos)
+    """
+    Procesa imágenes para detección de emociones faciales.
 
-    def procesar_imagen(self, ruta_o_bytes_imagen):
-        try:
-            if isinstance(ruta_o_bytes_imagen, bytes):
-                return base64.b64encode(ruta_o_bytes_imagen).decode('utf-8')
-            else:
-                with open(ruta_o_bytes_imagen, "rb") as archivo:
-                    return base64.b64encode(archivo.read()).decode('utf-8')
-        except Exception as e:
-            print(f"Error al convertir imagen: {e}")
-            return None
+    Hereda de:
+        Procesador
+    """
+
+    def procesar(self) -> None:
+        """
+        Implementación polimórfica del método procesar().
+        Ejecuta el flujo completo de procesamiento de imagen.
+        """
+        if not isinstance(self.datos, str):
+            print("⚠️ No se proporcionó una ruta de imagen válida.")
+            return
+
+        print("🖼️ Iniciando procesamiento de imagen...")
+        self.procesar_imagen(self.datos)
+        self.detectar_expresiones_faciales()
+        print("✅ Imagen procesada correctamente.")
+
+    def procesar_imagen(self, ruta_imagen: str) -> None:
+        """
+        Simula la carga y preprocesamiento de una imagen.
+
+        Parámetros
+        ----------
+        ruta_imagen : str
+            Ruta del archivo de imagen.
+        """
+        print(f"📸 Cargando imagen desde: {ruta_imagen}")
+        # Ejemplo real (comentado):
+        # import cv2
+        # self.datos = cv2.imread(ruta_imagen)
+        self.datos = f"Imagen simulada desde {ruta_imagen}"
+
+    def detectar_expresiones_faciales(self) -> None:
+        """
+        Simula la detección de expresiones faciales en la imagen procesada.
+        """
+        print("🤖 Analizando expresiones faciales...")
+        expresiones = {"felicidad": 0.75, "neutral": 0.20, "tristeza": 0.05}
+        print("🎭 Resultado simulado:", expresiones)
