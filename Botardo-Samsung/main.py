@@ -8,7 +8,11 @@ import requests
 import json
 # Importa os para acceder a variables de entorno
 import os
-# Importamos las clases de los módulos
+# Importamos los manejadores:
+from procesadores.procesador import Procesador
+from procesadores.ProcesadorTexto import ProcesadorTexto
+from procesadores.ProcesadorAudio import ProcesadorAudio
+from procesadores.ProcesadorImagen import ProcesadorImagen
 
 
 # Configuración de tokens y rutas
