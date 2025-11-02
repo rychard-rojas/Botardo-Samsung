@@ -1,0 +1,114 @@
+@startuml
+title 🌱 EduMoodBot – Sistema de Análisis Emocional en Entornos Educativos 🎓💬
+
+skinparam backgroundColor #fafafa
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam class {
+    BackgroundColor<<principal>> #e3f2fd
+    BackgroundColor<<modulo>> #e8f5e9
+    BackgroundColor<<procesador>> #fffde7
+    BackgroundColor<<interfaz>> #f3e5f5
+}
+
+'======================================================
+' CLASE PRINCIPAL
+'======================================================
+class EduMoodBot <<principal>> {
+    - analizador_sentimientos : AnalizadorSentimientos  'Analiza emociones y sentimientos del usuario
+    - generador_retroalimentacion : GeneradorRetroalimentacion  'Crea mensajes empáticos y sugerencias
+    - gestor_datos : GestorDatos  'Gestiona y analiza datos emocionales con Pandas y NumPy
+    - procesador_texto : ProcesadorTexto  'Procesa mensajes escritos
+    - procesador_imagen : ProcesadorImagen  'Procesa imágenes o gestos faciales
+    - procesador_audio : ProcesadorAudio  'Procesa tonos y patrones de voz
+
+    + recibir_entrada(tipo_entrada: str, datos: any)  'Recibe texto, imagen o audio según el tipo de entrada
+    + procesar_emocion()  'Inicia el análisis emocional según la entrada recibida
+    + generar_respuesta()  'Crea un mensaje empático basado en el resultado del análisis
+    + guardar_resultados()  'Guarda la información emocional en el historial de datos
+}
+
+'======================================================
+' CLASE BASE Y SUBCLASES DE PROCESAMIENTO
+'======================================================
+abstract class Procesador <<procesador>> {
+    - datos : any  'Entrada bruta (texto, imagen o audio)
+    + procesar()  'Método genérico de procesamiento de datos
+}
+
+class ProcesadorTexto extends Procesador {
+    + procesar_texto(texto: str)  'Limpia y normaliza el texto para análisis emocional
+    + limpiar_texto()  'Elimina ruido y caracteres no deseados del texto
+}
+
+class ProcesadorImagen extends Procesador {
+    + procesar_imagen(ruta_imagen: str)  'Lee y prepara la imagen para análisis facial
+    + detectar_expresiones_faciales()  'Identifica emociones en rostros mediante visión por computadora
+}
+
+class ProcesadorAudio extends Procesador {
+    + procesar_audio(archivo_audio: str)  'Extrae características del audio (tono, ritmo, intensidad)'
+    + analizar_tono_voz()  'Detecta emociones a partir del tono de voz'
+}
+
+'======================================================
+' CLASES DE ANÁLISIS Y RETROALIMENTACIÓN
+'======================================================
+class AnalizadorSentimientos <<modulo>> {
+    - parametros_modelo : dict  'Configura pesos o umbrales para la clasificación emocional
+    - resultados_analisis : dict  'Contiene el resultado del análisis (sentimiento y emoción detectada)
+
+    + analizar_sentimientos(datos: any)  'Procesa datos y determina polaridad emocional (positivo, negativo, neutro)'
+    + identificar_emociones(datos: any)  'Reconoce emociones específicas como alegría o tristeza'
+    + clasificar_sentimiento_general()  'Devuelve una categoría emocional resumida'
+}
+
+class GeneradorRetroalimentacion <<modulo>> {
+    + generar_mensaje_empatico(tipo_emocion: str)  'Crea un mensaje amable según la emoción detectada'
+    + recomendar_actividad_emocional(tipo_emocion: str)  'Sugiere una acción positiva (descanso, reflexión, etc.)'
+    + crear_respuesta_personalizada(sentimiento: str, emocion: str)  'Combina ambos para generar una respuesta adaptada al usuario'
+}
+
+'======================================================
+' CLASE DE GESTIÓN DE DATOS
+'======================================================
+class GestorDatos <<modulo>> {
+    - conjunto_datos : pandas.DataFrame  'Almacena el historial de interacciones y resultados emocionales'
+    - matriz_emociones : numpy.ndarray  'Contiene los vectores numéricos del análisis emocional'
+
+    + cargar_datos(fuente: str)  'Importa registros emocionales desde un archivo o base de datos'
+    + almacenar_datos_emocionales(datos: dict)  'Guarda nuevos resultados del análisis en el DataFrame'
+    + analizar_patrones_emocionales()  'Busca tendencias o cambios en las emociones a lo largo del tiempo'
+    + exportar_informe_emocional()  'Genera reportes estadísticos para docentes o investigadores'
+}
+
+'======================================================
+' INTERFAZ DE COMUNICACIÓN CON EL USUARIO
+'======================================================
+class InterfazUsuario <<interfaz>> {
+    + mostrar_mensaje(mensaje: str)  'Muestra un mensaje o resultado al usuario final'
+    + solicitar_entrada_usuario()  'Solicita un texto, imagen o audio al usuario'
+    + mostrar_retroalimentacion(mensaje: str)  'Presenta la respuesta empática o sugerencia emocional'
+}
+
+'======================================================
+' RELACIONES ENTRE CLASES
+'======================================================
+EduMoodBot *-- AnalizadorSentimientos : composición
+EduMoodBot *-- GeneradorRetroalimentacion : composición
+EduMoodBot *-- GestorDatos : composición
+EduMoodBot o-- ProcesadorTexto
+EduMoodBot o-- ProcesadorImagen
+EduMoodBot o-- ProcesadorAudio
+EduMoodBot --> InterfazUsuario : comunicación
+
+Procesador <|-- ProcesadorTexto
+Procesador <|-- ProcesadorImagen
+Procesador <|-- ProcesadorAudio
+
+AnalizadorSentimientos --> GestorDatos : utiliza datos
+GeneradorRetroalimentacion --> AnalizadorSentimientos : consulta resultados
+EduMoodBot --> GeneradorRetroalimentacion : obtiene respuesta
+InterfazUsuario --> EduMoodBot : envía entrada
+
+@enduml
