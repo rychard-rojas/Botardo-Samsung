@@ -47,7 +47,7 @@ def handle_text(message):
     
     # 1. Intentar responder desde el dataset con un umbral más alto
     # Un umbral de 85-90 es bueno para evitar falsos positivos.
-    respuesta_qa = manejador_qa.encontrar_respuesta(texto_usuario, umbral=88)
+    respuesta_qa = manejador_qa.encontrar_respuesta(texto_usuario, umbral=0.70)
     
     if respuesta_qa:
         bot.reply_to(message, respuesta_qa, parse_mode='Markdown')

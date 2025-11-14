@@ -1,45 +1,65 @@
 # manejador_dataset.py
 import json
-from thefuzz import process
+from sentence_transformers import SentenceTransformer, util
+import torch
 from typing import List, Dict, Optional
 
 class ManejadorDataset:
     def __init__(self, ruta_archivo: str):
         """
-        Inicializa el manejador cargando los datos desde un archivo JSON.
+        Inicializa el manejador, carga los datos y pre-calcula los embeddings
+        de las preguntas del dataset para una búsqueda semántica eficiente.
         """
         try:
+            # Usamos un modelo multilingüe ligero y potente.
+            print("Cargando modelo de embeddings semánticos...")
+            self.model = SentenceTransformer('all-MiniLM-L6-v2')
+            print("Modelo de embeddings cargado. ✅")
+            
             with open(ruta_archivo, 'r', encoding='utf-8') as f:
                 self.datos: List[Dict[str, str]] = json.load(f)
-            # Extraemos solo las preguntas para la búsqueda
+            
             self.preguntas: List[str] = [item['pregunta'] for item in self.datos]
-            print("Dataset cargado correctamente. ✅")
+            
+            # Pre-calcular los embeddings del dataset (¡esto es clave para la eficiencia!)
+            print("Pre-calculando embeddings del dataset...")
+            self.embeddings_dataset = self.model.encode(self.preguntas, convert_to_tensor=True)
+            print("Embeddings calculados y listos. ✅")
+
         except Exception as e:
             self.datos = []
             self.preguntas = []
-            print(f"Error al cargar el dataset: {e} ❌")
+            self.embeddings_dataset = None
+            print(f"Error crítico durante la inicialización del ManejadorDataset: {e} ❌")
 
-    def encontrar_respuesta(self, consulta_usuario: str, umbral: int = 75) -> Optional[str]:
+    def encontrar_respuesta(self, consulta_usuario: str, umbral: float = 0.70) -> Optional[str]:
         """
-        Busca la pregunta más similar en el dataset y devuelve su respuesta
-        si la similitud supera un umbral.
+        Busca la pregunta más similar semánticamente usando embeddings y similitud de coseno.
 
         Args:
             consulta_usuario: La pregunta del usuario.
-            umbral: El porcentaje de similitud mínimo (0-100) para considerar una coincidencia.
+            umbral: El score de similitud mínimo (0.0 a 1.0) para una coincidencia.
 
         Returns:
-            La respuesta correspondiente o None si no hay una buena coincidencia.
+            La respuesta correspondiente o None.
         """
-        if not self.preguntas:
+        if self.embeddings_dataset is None:
             return None
 
-        # process.extractOne devuelve una tupla: (pregunta_encontrada, similitud)
-        mejor_coincidencia = process.extractOne(consulta_usuario, self.preguntas)
-        
-        if mejor_coincidencia and mejor_coincidencia[1] >= umbral:
-            pregunta_coincidente = mejor_coincidencia[0]
-            # Buscamos la respuesta correspondiente a la pregunta encontrada
+        # 1. Codificar la pregunta del usuario en un embedding
+        embedding_usuario = self.model.encode(consulta_usuario, convert_to_tensor=True)
+
+        # 2. Calcular la similitud de coseno entre el embedding del usuario y todos los del dataset
+        # util.cos_sim nos devuelve una matriz de scores
+        scores_coseno = util.cos_sim(embedding_usuario, self.embeddings_dataset)[0]
+
+        # 3. Encontrar el score más alto y su índice
+        mejor_score, mejor_indice = torch.max(scores_coseno, dim=0)
+
+        # 4. Si el mejor score supera nuestro umbral, encontramos una coincidencia
+        if mejor_score.item() > umbral:
+            # Usamos el índice para encontrar la pregunta y respuesta originales
+            pregunta_coincidente = self.preguntas[mejor_indice]
             for item in self.datos:
                 if item['pregunta'] == pregunta_coincidente:
                     return item['respuesta']
