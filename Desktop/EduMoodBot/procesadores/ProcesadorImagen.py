@@ -1,4 +1,3 @@
-# procesadores/ProcesadorImagen.py
 from transformers import pipeline
 from procesadores.procesador_base import Procesador
 
@@ -13,7 +12,7 @@ class ProcesadorImagen(Procesador):
         super().__init__(datos)
         try:
             # Usamos un modelo pre-entrenado para clasificación de imágenes.
-            # Este modelo identifica objetos, no emociones directamente, pero sirve como ejemplo funcional.
+            # Este modelo identifica objetos, no emociones directamente.
             print("Cargando modelo de clasificación de imágenes...")
             self.clasificador = pipeline("image-classification", model="google/vit-base-patch16-224")
             print("Modelo de imagen cargado. ✅")
@@ -32,9 +31,9 @@ class ProcesadorImagen(Procesador):
             return {"error": "⚠️ Ruta de imagen inválida."}
         
         try:
-            # El clasificador devuelve una lista de diccionarios con 'label' y 'score'
+            
             predicciones = self.clasificador(self.datos)
-            # Formateamos el resultado para que sea más legible
+            
             resultado = {
                 "descripcion_probable": predicciones[0]['label'],
                 "confianza": f"{predicciones[0]['score']:.2%}",

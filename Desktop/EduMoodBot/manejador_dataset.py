@@ -11,7 +11,6 @@ class ManejadorDataset:
         de las preguntas del dataset para una búsqueda semántica eficiente.
         """
         try:
-            # Usamos un modelo multilingüe ligero y potente.
             print("Cargando modelo de embeddings semánticos...")
             self.model = SentenceTransformer('all-MiniLM-L6-v2')
             print("Modelo de embeddings cargado. ✅")
@@ -21,7 +20,7 @@ class ManejadorDataset:
             
             self.preguntas: List[str] = [item['pregunta'] for item in self.datos]
             
-            # Pre-calcular los embeddings del dataset (¡esto es clave para la eficiencia!)
+            # Pre-calcular los embeddings del dataset.
             print("Pre-calculando embeddings del dataset...")
             self.embeddings_dataset = self.model.encode(self.preguntas, convert_to_tensor=True)
             print("Embeddings calculados y listos. ✅")

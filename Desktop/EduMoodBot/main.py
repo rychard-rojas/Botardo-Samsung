@@ -1,11 +1,10 @@
-# main.py
 import os
 import telebot
 from typing import Any
 
 # --- Módulos del Proyecto ---
 import config
-from manejador_dataset import ManejadorDataset # <-- NUEVO
+from manejador_dataset import ManejadorDataset 
 from procesadores.ProcesadorTexto import ProcesadorTexto
 from procesadores.ProcesadorImagen import ProcesadorImagen
 from procesadores.ProcesadorAudio import ProcesadorAudio
@@ -13,14 +12,13 @@ from analizador_sentimientos import AnalizadorSentimiento
 from api_client import generar_feedback_ia
 
 # --- Inicialización de Componentes ---
-# Validamos que los tokens existan antes de inicializar
 if not config.TELEGRAM_TOKEN or not config.GROQ_API_KEY:
     raise ValueError("Los tokens de TELEGRAM_TOKEN y GROQ_API_KEY deben estar definidos en el archivo .env")
 
 bot = telebot.TeleBot(config.TELEGRAM_TOKEN)
 analizador_sentimiento = AnalizadorSentimiento()
-manejador_qa = ManejadorDataset('dataset.json') # <-- NUEVO
-procesador_imagen = ProcesadorImagen(None) # Inicializamos el modelo de imagen una sola vez para eficiencia
+manejador_qa = ManejadorDataset('dataset.json') 
+procesador_imagen = ProcesadorImagen(None) 
 
 print("EduMoodBot iniciado. Esperando mensajes...")
 
@@ -46,7 +44,6 @@ def handle_text(message):
     texto_usuario = message.text
     
     # 1. Intentar responder desde el dataset con un umbral más alto
-    # Un umbral de 85-90 es bueno para evitar falsos positivos.
     respuesta_qa = manejador_qa.encontrar_respuesta(texto_usuario, umbral=0.70)
     
     if respuesta_qa:

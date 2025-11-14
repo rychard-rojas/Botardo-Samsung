@@ -1,8 +1,7 @@
-# procesadores/ProcesasdorAudio.py
 import speech_recognition as sr
 from procesadores.procesador_base import Procesador
-from pydub import AudioSegment # <-- Importar pydub
-import os # <-- Importar os para manejar rutas
+from pydub import AudioSegment 
+import os 
 
 class ProcesadorAudio(Procesador):
     def __init__(self, ruta_audio: str):
@@ -36,15 +35,15 @@ class ProcesadorAudio(Procesador):
                 audio_data = self.recognizer.record(source)
                 texto_transcrito = self.recognizer.recognize_google(audio_data, language='es-ES')
             
-            # (Opcional) Limpiar los archivos temporales
+            
             os.remove(ruta_wav)
             
             return texto_transcrito
         except sr.UnknownValueError:
-            os.remove(ruta_wav) # Limpiar incluso si falla
+            os.remove(ruta_wav) 
             return "⚠️ No pude entender lo que dijiste en el audio."
         except sr.RequestError as e:
-            os.remove(ruta_wav) # Limpiar incluso si falla
+            os.remove(ruta_wav) 
             return f"⚠️ Error con el servicio de reconocimiento de voz; {e}"
         except Exception as e:
             if os.path.exists(ruta_wav):
