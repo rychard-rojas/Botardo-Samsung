@@ -1,0 +1,12 @@
+#Python 3.10
+
+numpy<2.0   
+python-dotenv
+pyTelegramBotAPI
+requests
+transformers[torch]
+thefuzz
+PyAudio
+SpeechRecognition
+pydub
+sentence-transformers

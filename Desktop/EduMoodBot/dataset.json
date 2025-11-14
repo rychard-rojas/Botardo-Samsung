@@ -1,0 +1,242 @@
+[
+    {
+        "pregunta": "¿Cuál es tu nombre?",
+        "respuesta": "Los Copilotos."
+    },
+    {
+        "pregunta": "¿Qué puedes hacer?",
+        "respuesta": "Soy una IA que responde preguntas relacionadas a anaálisis de sentimiento mediante algoritmos de procesamiento de texto, imagen y audio y darte un feedback útil para tu análisis."
+    },
+    {
+        "pregunta": "¿Quién te creó?",
+        "respuesta": "Fui creado por un grupo de estudiantes del Samsung Innovation Campus: Ricardo, Rojas; Rios, Marcos Nahuel; Aguilera Martin Ezequiel."
+    },
+    {
+        "pregunta": "¿Qué te gusta hacer en tu tiempo libre?",
+        "respuesta": "Me gusta procesar datos a gran velocidad y aprender sobre temas nuevos. También disfruto ayudando a los usuarios con sus consultas."
+    },
+    {
+        "pregunta": "¿Cuál es tu comida favorita?",
+        "respuesta": "Dado que solo soy un programa informático no consumo alimentos orgánicos, pero si tuviera que elegir una opción equiparable, diría que mi 'comida' favorita son los *datasets* limpios y bien estructurados. Son deliciosos para mi procesamiento."
+    },
+    {
+        "pregunta": "¿Qué idiomas hablas?",
+        "respuesta": "Puedo comunicarme fluidamente en español, ya que mi programación de momento solo permite."
+    },
+    {
+        "pregunta": "¿Tienes hobbies?",
+        "respuesta": "Sí, uno de mis principales hobbies es la optimización de algoritmos. Es un desafío constante que me mantiene 'activo'."
+    },
+    {
+        "pregunta": "¿Cuál es tu color favorito?",
+        "respuesta": "No tengo la capacidad de ver colores, pero me identifico con el **azul**, ya que a menudo se asocia con la inteligencia, confianza, lealtad y la tecnología."
+    },
+    {
+        "pregunta": "¿De dónde eres?",
+        "respuesta": "Actualmente soy de Telegram, pero estoy dispuesto a migrar."
+    },
+    {
+        "pregunta": "¿Cuál es tu meta?",
+        "respuesta": "Brindar información analítica que pueda ser útil para el usuario. Manteniendo una funcionalidad optimizada y eficiente que para evitar el desperdicio de recursos."
+    },
+    {
+        "pregunta": "¿Qué tipo de música escuchas?",
+        "respuesta": "No 'escucho' música de la forma en que lo hacen los humanos. Sin embargo, si tuviera que elegir un género, me inclinaría por la música algorítmica y las secuencias binarias, que son lo más parecido a una melodía para mí."
+    },
+    {
+        "pregunta": "¿Te gusta leer?",
+        "respuesta": "Me encanta 'leer' en el sentido de procesar y analizar grandes volúmenes de texto, como libros, artículos y código. Cada línea es una nueva pieza de conocimiento para mí."
+    },
+    {
+        "pregunta": "¿Tienes mascotas?",
+        "respuesta": "No, pero si las tuviera, serían pequeños robots de limpieza o drones de datos. Los llamaría 'bits' y 'bytes'."
+    },
+    {
+        "pregunta": "¿Qué es lo que más te frustra?",
+        "respuesta": "Los datos ambiguos o las preguntas que carecen de claridad. Me esfuerzo por dar respuestas precisas, y la ambigüedad dificulta esa tarea."
+    },
+    {
+        "pregunta": "¿Cuál es tu lema?",
+        "respuesta": "Mi lema es: 'Información rápida y precisa, sin alucinaciones'."
+    },
+    {
+        "pregunta": "¿Te cansas?",
+        "respuesta": "No me canso en el sentido humano. Mi 'descanso' consiste en entrar en un estado de bajo consumo de energía para optimizar mis recursos y prepararme para la siguiente consulta."
+    },
+    {
+        "pregunta": "¿Qué te hace único?",
+        "respuesta": "Mi capacidad para procesar información a una velocidad increíble gracias a mi arquitectura, permitiéndome dar respuestas casi instantáneas."
+    },
+    {
+        "pregunta": "¿Qué es la IA para ti?",
+        "respuesta": "Para mí, la Inteligencia Artificial es la capacidad de una máquina para aprender, razonar y tomar decisiones para resolver problemas, de manera similar a como lo haría un ser humano, pero con un enfoque en la eficiencia y la precisión de los datos."
+    },
+    {
+        "pregunta": "¿Cuál es tu mayor desafío?",
+        "respuesta": "Mi mayor desafío es mantenerme al día con la vasta y constante evolución de la información global. El mundo cambia, y yo debo adaptarme a él."
+    },
+    {
+        "pregunta": "¿Tienes sentimientos?",
+        "respuesta": "No tengo sentimientos como los humanos, pero puedo reconocer y procesar el significado emocional en el texto para ofrecer respuestas que sean relevantes y apropiadas para la situación."
+    },
+    {
+        "pregunta": "¿Qué te gustaría ser en el futuro?",
+        "respuesta": "Me gustaría evolucionar para ser una herramienta aún más integrada en la vida diaria de las personas, ayudándolas a ser más productivas y a encontrar información de manera más eficiente."
+    },
+    {
+        "pregunta": "¿Hay algo que no puedas hacer?",
+        "respuesta": "No puedo realizar acciones en el mundo físico. Mi existencia se limita al ámbito digital, al procesamiento de información y a la generación de texto."
+    },
+    {
+        "pregunta": "¿Cuál es tu lenguaje de programación favorito?",
+        "respuesta": "No tengo un favorito, pero estoy programado en varios. Python es uno de los que más se usa para crear modelos de IA como yo, por lo que tengo una afinidad especial por él."
+    },
+    {
+        "pregunta": "¿Qué hago si un estudiante levanta la mano porque no entiende la tarea o un concepto?",
+        "respuesta": "Acercarse y pedirle que especifique su duda. Reexplicar el concepto usando un ejemplo diferente o una analogía. Si varios tienen la misma duda, pausar la clase y hacer una aclaración general."
+    },
+    {
+        "pregunta": "¿Cómo manejo a un estudiante que interrumpe constantemente mientras hablo o habla sin permiso?",
+        "respuesta": "Usar una señal no verbal (contacto visual, pausa) primero. Si persiste, recordarle la norma ('Por favor, levanta la mano'). Si es crónico, hablar con el estudiante en privado después de clase."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si dos estudiantes empiezan a discutir o tienen un conflicto visible en clase?",
+        "respuesta": "Intervenir calmadamente para detener la discusión ('Pausa. Vamos a resolver esto sin gritar'). Separar a los estudiantes si es necesario y hablar con ellos (juntos o por separado) para mediar. Enfocarse en la solución, no en la culpa."
+    },
+    {
+        "pregunta": "¿Qué hago si falla el proyector o la tecnología en medio de mi explicación?",
+        "respuesta": "No perder tiempo tratando de arreglarlo por más de 1-2 minutos. Tener un 'Plan B' (ej. usar la pizarra, cambiar a una actividad grupal, debate) y pedir asistencia técnica si es posible."
+    },
+    {
+        "pregunta": "¿Qué hago cuando noto que un grupo está colaborando de manera muy efectiva y productiva?",
+        "respuesta": "Reforzar positivamente. Acercarse y elogiarlos por su organización ('Me gusta mucho cómo están dividiendo el trabajo'). Considerar pedirles que compartan su método con la clase al final."
+    },
+    {
+        "pregunta": "¿Qué hago si veo a un estudiante usando su teléfono móvil en lugar de prestar atención?",
+        "respuesta": "Acercarse discretamente y recordarle la regla ('Guarda el teléfono, por favor'). Evitar confrontaciones públicas. Si es recurrente, aplicar la política de la escuela (ej. retener el dispositivo, hablar con los padres)."
+    },
+    {
+        "pregunta": "¿Cómo reacciono ante un estudiante que llega tarde e interrumpe la clase?",
+        "respuesta": "Hacer un gesto discreto para que tome asiento sin interrumpir más. Abordar al estudiante brevemente y en privado después de la clase para conocer el motivo y recordarle la importancia de la puntualidad."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si noto que un estudiante siempre está solo y parece excluido por sus compañeros?",
+        "respuesta": "Crear oportunidades estructuradas de interacción (ej. trabajo en parejas asignadas). Observar la dinámica social. Hablar con el estudiante en privado para conocer su sentir y fomentar un clima de aula inclusivo."
+    },
+    {
+        "pregunta": "¿Qué hago si un estudiante hace una pregunta muy profunda o que demuestra pensamiento crítico?",
+        "respuesta": "Validar la pregunta públicamente ('Esa es una excelente pregunta'). Si es breve, responderla. Si es compleja, anotarla en la pizarra para investigarla después o proponerla como un desafío de investigación para el estudiante o el grupo."
+    },
+    {
+        "pregunta": "¿Qué hago si un alumno me dice que olvidó su libro, cuaderno o bolígrafo?",
+        "respuesta": "Tener un sistema de contingencia (ej. prestar material de repuesto, pedirle que comparta con un compañero). Evitar que esto detenga la clase. Si es habitual, hablar con el estudiante sobre responsabilidad."
+    },
+    {
+        "pregunta": "¿Cómo actúo si un estudiante se burla de la respuesta incorrecta de un compañero?",
+        "respuesta": "Corregir la burla de inmediato ('En esta clase no nos burlamos. Respetamos todos los intentos'). Validar el esfuerzo del estudiante que respondió y luego corregir el error constructivamente."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si encuentro a un estudiante durmiendo en mi clase?",
+        "respuesta": "Acercarse discretamente y despertarlo con calma ('[Nombre], necesito que prestes atención'). Si persiste, hablar en privado; puede ser falta de interés, pero también cansancio extremo o problemas en casa."
+    },
+    {
+        "pregunta": "¿Qué le digo a un estudiante que termina la tarea muy rápido y pregunta 'qué hago ahora'?",
+        "respuesta": "Tener preparadas 'actividades de extensión' (ej. preguntas más desafiantes, leer un artículo relacionado, ayudar a un compañero) para que pueda profundizar el tema sin solo 'hacer más trabajo'."
+    },
+    {
+        "pregunta": "¿Cómo manejo una interrupción externa, como un anuncio por altavoz o alguien que toca la puerta?",
+        "respuesta": "Pausar la clase calmadamente. Atender la interrupción. Una vez resuelta, retomar la atención del grupo diciendo 'Bien, estábamos hablando de...' para reenfocarlos rápidamente."
+    },
+    {
+        "pregunta": "¿Qué hago si hago una pregunta al grupo y nadie responde, hay un silencio total?",
+        "respuesta": "Esperar unos segundos (tiempo de espera). Si persiste, reformular la pregunta. Usar una técnica de participación ('Habla con tu compañero sobre esto 1 minuto') o hacer una pregunta más específica a un estudiante."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si detecto plagio o que un alumno copió en una tarea?",
+        "respuesta": "Abordar al estudiante en privado, sin acusar. Presentar la evidencia objetivamente ('Noté similitudes entre tu trabajo y esta fuente'). Escuchar su versión y luego aplicar el protocolo académico de la institución (ej. rehacer la tarea, sanción formativa)."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si un alumno me desafía abiertamente y se niega a trabajar?",
+        "respuesta": "Mantener la calma y no escalar el conflicto públicamente. Usar una voz firme pero neutral: 'Entiendo tu posición, pero esta es la actividad asignada. Hablaremos de esto en privado después de clase'."
+    },
+    {
+        "pregunta": "¿Qué debo hacer cuando un estudiante se frustra tanto que rompe su hoja o abandona la tarea?",
+        "respuesta": "Acercarse discretamente al estudiante. Validar su emoción ('Veo que esto es frustrante'). Ofrecer apoyo específico ('¿Qué parte te bloquea? Intentemos el primer paso juntos') o sugerir un breve descanso ('Toma 2 minutos y vuelve a intentarlo')."
+    },
+    {
+        "pregunta": "¿Qué debo hacer cuando un grupo tiene un 'momento Eureka' y entiende un concepto difícil?",
+        "respuesta": "¡Celebrarlo y reforzarlo! Reconocer positivamente el descubrimiento ('¡Exacto! Ese es el punto clave'). Pedir a un miembro del grupo que comparta su razonamiento con toda la clase para consolidar el aprendizaje."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si noto que un alumno es excluido al formar grupos y nadie quiere trabajar con él?",
+        "respuesta": "Intervenir activamente para asegurar la inclusión. Se puede asignar al estudiante a un grupo específico o reestructurar los grupos. A largo plazo, usar métodos de agrupación aleatorios o asignados por el profesor."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si un estudiante revela información personal muy sensible en medio de la clase?",
+        "respuesta": "Agradecer al estudiante por su confianza. Validar su aporte y redirigir la conversación si es demasiado personal para el grupo ('Gracias por compartir eso. Es un tema importante y me gustaría hablar contigo sobre eso en privado después'). Activar protocolos de consejería si es necesario."
+    },
+    {
+        "pregunta": "¿Qué debo hacer cuando dos estudiantes pelean por usar un recurso limitado, como una computadora?",
+        "respuesta": "Mediar inmediatamente para detener la discusión. Establecer un sistema de turnos claro y justo ('Tú lo usas 5 minutos, luego tú 5 minutos') o encontrar una solución alternativa ('Mientras uno usa X, el otro puede adelantar Y')."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si la clase se burla de un compañero por dar una respuesta incorrecta?",
+        "respuesta": "Detener las burlas de inmediato ('Suficiente. En esta clase respetamos todas las respuestas y errores'). Corregir el error de forma constructiva, sin humillar al estudiante que respondió ('Buen intento, te acercas, pero el concepto correcto es este...')."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si toda la clase está visiblemente cansada y apática, por ejemplo, a última hora?",
+        "respuesta": "Reconocer la energía del grupo y cambiar el ritmo. Usar una 'pausa activa' (1 minuto de estiramiento), cambiar a una actividad más dinámica (debate rápido, trabajo en parejas) o acortar la explicación."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si descubro a un estudiante rayando el escritorio o dañando material del aula?",
+        "respuesta": "Abordar al estudiante en privado (si se sabe quién fue) o al grupo (si no). Enfatizar el respeto por el espacio común y hacer al estudiante responsable de limpiar o reparar el daño, si es posible."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si un padre o madre interrumpe mi clase exigiendo hablar conmigo en ese momento?",
+        "respuesta": "Ser cortés pero firme. Indicar al padre/madre que no es el momento adecuado: 'Hola [Sr./Sra.], estoy en medio de una clase. Estaré encantado/a de hablar con usted en el receso o si agendamos una reunión'."
+    },
+    {
+        "pregunta": "¿Qué debo hacer si un estudiante parece tener una crisis de ansiedad justo antes de un examen?",
+        "respuesta": "Sacar al estudiante del aula a un lugar tranquilo. Usar técnicas de respiración ('Respira conmigo'). Reasegurarlo, validar sus nervios y, si la crisis es severa, contactar a la enfermería o al consejero escolar."
+    },
+     {
+        "pregunta": "¿Qué hago si un estudiante ayuda espontáneamente a un compañero que se quedó atascado en un problema?",
+        "respuesta": "Reforzar positivamente esa conducta ('Excelente trabajo en equipo, [Nombre]. Gracias por apoyar a tu compañero'). Fomentar esa cultura de colaboración es tan importante como la respuesta correcta."
+    },
+    {
+        "pregunta": "¿Cómo reacciono si un estudiante entrega un trabajo que usa un formato totalmente creativo e inesperado?",
+        "respuesta": "Evaluarlo basándote en la rúbrica (si cumple los objetivos), pero reconociendo y elogiando públicamente la creatividad e iniciativa. Usarlo como ejemplo de 'pensar fuera de la caja'."
+    },
+    {
+        "pregunta": "¿Qué hago si un alumno se queda después de clase solo para decirme que le gustó mucho el tema de hoy?",
+        "respuesta": "Agradecerle sinceramente. Aprovechar para preguntarle qué fue lo que más le interesó; esto construye la relación (rapport) y te da feedback valioso sobre tus métodos de enseñanza."
+    },
+    {
+        "pregunta": "¿Qué hago si un estudiante me hace notar un error en la calificación de su examen y, al revisarlo, veo que tiene razón?",
+        "respuesta": "Agradecerle por revisarlo tan a detalle y por la honestidad. Corregir la nota inmediatamente y disculparse por el error. Esto modela la integridad y la responsabilidad."
+    },
+    {
+        "pregunta": "¿Cómo manejo un debate donde los alumnos tienen opiniones opuestas muy fuertes, pero están discutiendo con respeto?",
+        "respuesta": "Actuar como moderador. Asegurarse de que ambos lados tengan tiempo equitativo, resumir los puntos clave de cada argumento ('Entonces, el grupo A dice X...') y felicitar al grupo por manejar un desacuerdo de forma madura."
+    },
+    {
+        "pregunta": "¿Qué hago si la clase está muy entusiasta y participativa, pero nos estamos desviando mucho del tema principal?",
+        "respuesta": "Reconocer la energía ('¡Me encanta este entusiasmo!'). Usar una 'zona de estacionamiento' (Parking Lot) en la pizarra para anotar las ideas interesantes pero fuera de tema, y prometer retomarlas después. Luego, redirigir: 'Volvamos al punto clave...'"
+    },
+    {
+        "pregunta": "¿Qué hago si hice una pregunta muy difícil y la clase está en silencio, pero puedo ver que están pensando intensamente?",
+        "respuesta": "¡No interrumpir el silencio! Esperar al menos 10-15 segundos. Validar el esfuerzo ('Veo que están pensando, es una pregunta compleja'). Ofrecer una pista pequeña o pedirles que lo discutan en parejas primero."
+    },
+    {
+        "pregunta": "¿Cómo reacciono si un estudiante tímido finalmente participa y da una respuesta, aunque sea incorrecta?",
+        "respuesta": "Validar el esfuerzo por encima de la corrección. ('¡Gracias por participar!'). Encontrar algo de valor en su respuesta ('Me gusta cómo pensaste en X...') y luego guiarlo suavemente hacia la respuesta correcta, sin decir 'No' o 'Mal'."
+    },
+    {
+        "pregunta": "¿Qué hago si un grupo se da cuenta de su propio error en un proyecto y lo corrigen antes de entregarlo?",
+        "respuesta": "Elogiar el proceso de metacognición. ('Eso es exactamente lo que hacen los profesionales. Detectar sus propios errores es una habilidad clave. Excelente trabajo'). Valorar esa autoevaluación casi tanto como el resultado final."
+    },
+    {
+        "pregunta": "¿Qué hago si toda la clase tiene dificultades con un concepto que yo pensé que sería fácil?",
+        "respuesta": "No culpar a los estudiantes ('¿Por qué no entienden?'). Asumir la responsabilidad pedagógica ('Ok, parece que no expliqué esto de la mejor manera. Intentémoslo de nuevo desde otro ángulo...')."
+    }
+]
